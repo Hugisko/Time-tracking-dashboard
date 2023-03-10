@@ -8,7 +8,7 @@ async function dataLoad(selected) {
         data.forEach((e) => {
             const title = e.title;
             cards.forEach(card => {
-                const name = card.id; 
+                const name = card.id == 'Self-Care' ? 'Self Care' : card.id; 
                 if(name === title) {
                     const current = card.querySelector('.current');
                     const previous = card.querySelector('.previous');
